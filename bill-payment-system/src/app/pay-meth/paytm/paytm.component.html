@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-xs-11 mt-5 ml-5 mr-5 mb-5 mx-auto">
+        <div class="card mt-5">
+            <h1 class="mt-5 ml-5">PayTm</h1>
+            <form [formGroup]="payForm">
+                <div class="row ml-5 mr-5">
+                    <div class="col-md-6 col-xs-12 mt-5">
+                        <label for="cname">Name</label>
+                        <input type="text" class="form-control" placeholder="Enter Name" formControlName="cname"
+                            id="cname" required>
+                        <div class="alert-danger" *ngIf="cname.touched && cname.invalid && cname.errors.required">Name
+                            is required</div>
+                        <div class="alert alert-danger" *ngIf="cname.invalid && cname.touched">
+                            Invalid Name
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-12 mt-5">
+                        <label for="payid">Paytm ID</label>
+                        <input type="text" class="form-control" placeholder="Enter Phone Number" formControlName="payid"
+                            id="payid" required>
+                        <div class="alert alert-danger" *ngIf="payid.touched && payid.invalid && payid.errors.required">
+                            Phone Number is required</div>
+                        <div class="alert alert-danger" *ngIf="payid.invalid && payid.touched">
+                            Invalid ID
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5 ml-5 mr-5 mb-5">
+                    <div class="col-6">
+                        <button type="submit" [disabled]="!payForm.valid" (click)="pay()"
+                            class="btn btn-success">Pay</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,119 @@
+<div class="row">
+    <div class="col-xs-11 mt-5 ml-5 mr-5 mb-5 mx-auto">
+        <div class="card mt-5">
+            <h1 class="mt-5 ml-5"><b>CUSTOMER DETAILS</b></h1>
+            <form [formGroup]="registerForm" (submit)="submit()">
+                <div class="col-lg-11 alert alert-danger mx-3" *ngIf="userCreated == false">
+                    {{this.error}}
+                </div>
+                <div class="col-lg-11 alert alert-success mx-3" *ngIf="userCreated == true">
+                    {{this.error}}
+                </div>
+
+                <div class="row ml-5 mr-5">
+                    <div class="col-md-6 col-xs-12 mt-5">
+                        <label for="firstname">First Name</label>
+                        <input type="text" class="form-control" placeholder="Enter First Name"
+                            formControlName="firstname" id="firstname" required>
+                        <div class="alert alert-danger"
+                            *ngIf="firstname.invalid && firstname.errors.required && firstname.touched">First Name is
+                            required</div>
+                        <div class="alert alert-danger" *ngIf="firstname.invalid && firstname.touched">
+                            Only 50 characters are allowed
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-12  mt-5">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" class="form-control" placeholder="Enter Last Name" formControlName="lastname"
+                            id="lastname" required>
+                        <div class="alert alert-danger"
+                            *ngIf="lastname.invalid && lastname.errors.required && lastname.touched">Last Name is
+                            required</div>
+                        <div class="alert alert-danger" *ngIf="lastname.invalid && lastname.touched">
+                            Only 50 characters are allowed
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row ml-5 mr-5">
+                    <div class="col-md-6 col-xs-12 mt-5">
+                        <label for="age">Age</label>
+                        <input type="text" class="form-control" placeholder="Enter Age" formControlName="age" id="age"
+                            required>
+                        <div class="alert alert-danger" *ngIf="age.invalid && age.errors.required && age.touched">Age is
+                            required</div>
+                        <div class="alert alert-danger" *ngIf="age.invalid && age.touched">
+                            Only 2 digit numeric values are allowed
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-12 mt-5">
+                        <label for="gender">Gender</label>
+                        <select class="form-control" id="gender" formControlName="gender" required>
+                            <option value="" disabled>Select Gender</option>
+                            <option *ngFor="let gender of genders" [value]="gender">{{gender}}</option>
+                        </select>
+                        <div class="alert alert-danger"
+                            *ngIf="gender.invalid && gender.errors.required && gender.touched"> Gender is required</div>
+                    </div>
+                </div>
+
+                <div class="row ml-5 mr-5">
+                    <div class="col-md-6 col-xs-12 mt-5">
+                        <label for="contactNumber">Contact Number</label>
+                        <input type="text" class="form-control" placeholder="Enter Contact Number"
+                            formControlName="contactNumber" id="contactNumber">
+                        <div class="alert alert-danger" *ngIf="contactNumber.invalid  && contactNumber.touched">
+                            Only 10 digits numeric values are allowed
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-12  mt-5">
+                        <label for="email">Email Address</label>
+                        <input type="text" class="form-control" placeholder="Enter email" formControlName="email"
+                            id="email" required>
+                        <div class="alert alert-danger" *ngIf="email.invalid && email.errors.required && email.touched">
+                            Email is invalid</div>
+                    </div>
+                </div>
+
+                <div class="row ml-5 mr-5">
+                    <div class="col-md-6 col-xs-12 mt-5">
+                        <label for="pan">PAN</label>
+                        <input type="text" class="form-control" placeholder="Enter PAN" formControlName="pan" id="pan"
+                            required>
+                        <div class="alert alert-danger" *ngIf="pan.invalid && pan.touched">PAN Number is invalid</div>
+                    </div>
+                    <div class="col-md-6 col-xs-12  mt-5">
+                        <label for="aadharNumber">Aadhar Number</label>
+                        <input type="text" class="form-control" placeholder="Enter Aadhar Number"
+                            formControlName="aadharNumber" id="aadharNumber" required>
+                        <div class="alert alert-danger" *ngIf="aadharNumber.invalid  && aadharNumber.touched">Aadhar
+                            Number is invalid</div>
+                    </div>
+                </div>
+
+                <div class="row ml-5 mr-5">
+                    <div class="col-md-6 col-xs-12 mt-5">
+                        <label for="userid">UserID</label>
+                        <input type="text" class="form-control" placeholder="Enter UserID" formControlName="userid"
+                            id="userid" required>
+                        <div class="alert alert-danger"
+                            *ngIf="userid.invalid && userid.errors.required && userid.touched">UserID is invalid</div>
+                    </div>
+                    <div class="col-md-6 col-xs-12 mt-5">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" placeholder="Enter Password"
+                            formControlName="password" id="password" required>
+                        <div class="alert alert-danger"
+                            *ngIf="password.invalid && password.errors.required && password.touched">Password is invalid
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5 ml-5 mr-5 mb-5">
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

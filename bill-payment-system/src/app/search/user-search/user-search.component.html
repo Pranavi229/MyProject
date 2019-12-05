@@ -1,0 +1,25 @@
+<div class="image-holder jumbotron">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-6 col-sm-6 ">
+      <h2 class="mb-0 text-white">Find Vendor/VendorType</h2>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text lighten-3" id="basic-text1">
+            <i class="material-icons">image_search</i>
+          </span>
+        </div>
+        <input class="form-control" type="text" placeholder="Search" name="search-bar" [(ngModel)]='searchKey'
+          (input)="search()">
+      </div>
+    </div>
+  </div>
+</div>
+<app-vendor-menu></app-vendor-menu>
+<!-- <div class="card my-5">
+             <div *ngFor="let v of filteredvendorList"><h1>{{v.vname}}</h1>
+             <div class="row mt-3 ml-5 mr-5 mb-5">
+                <div class="col-12">
+                  <button type="register" class="btn register-btn">View</button>
+                </div>
+              </div>
+              </div> -->

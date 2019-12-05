@@ -1,0 +1,145 @@
+/* include stylesheet for this project */
+.body{
+	overflow:hidden;
+}
+
+/* User-defined Classes*/
+
+/* include stylesheet for this project */
+.body{
+	overflow:hidden;
+}
+
+/* User-defined Classes*/
+
+
+.grey-text-small{
+	font-size:15px;
+	color: #808080;
+	width: 50%;
+	margin:0px;
+}
+.material-icons.time{
+	color:#808080;
+	font-size:18px;
+}
+.float-left{
+	float: left;
+}
+.btn.add-to-cart{
+	background-color: #ed7d2c;
+	color: #ffffff;
+	float: right;
+}
+
+.image-holder{
+	height: auto;
+	width: 100%;
+	background-image: url('https://images.unsplash.com/photo-1555196301-ace64f260222?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80https://images.unsplash.com/photo-1555196301-ace64f260222?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80');
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}
+/* Bootstrap classes */
+.navbar {
+	background-color: #ed7d2c;
+}
+.material-icons{
+	vertical-align: middle;
+}
+.material-icons.delivery-icon{
+	vertical-align: middle;
+	color: #004080;
+}
+
+.material-icons.md-36 {
+	font-size: 36px;
+	color: #ffffff;
+	vertical-align: middle;
+}
+
+.material-icons.md-36:hover {
+	color: #ffffff;
+}
+
+a.menu-link, a.menu-link:link, a.menu-link:active, a.menu-link:hover {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.card-img-top.img{
+	object-fit:contain;
+	height: auto;
+	max-width:100%;
+}
+.cart-text{
+	color: #808080;
+	font-size: 18px;
+}
+
+.grey-text-small{
+	font-size:15px;
+	color: #808080;
+	width: 50%;
+	margin:0px;
+}
+.material-icons.time{
+	color:#808080;
+	font-size:18px;
+}
+.float-left{
+	float: left;
+}
+.btn.add-to-cart{
+	background-color: #ed7d2c;
+	color: #ffffff;
+	float: right;
+}
+.cr {
+    background-color: #808080;
+}
+
+.image-holder{
+	height: auto;
+	width: 100%;
+	background-image: url('https://images.unsplash.com/photo-1555196301-ace64f260222?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80https://images.unsplash.com/photo-1555196301-ace64f260222?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80');
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}
+/* Bootstrap classes */
+.navbar {
+	background-color: #ed7d2c;
+}
+.material-icons{
+	vertical-align: middle;
+}
+.material-icons.delivery-icon{
+	vertical-align: middle;
+	color: #004080;
+}
+
+.material-icons.md-36 {
+	font-size: 36px;
+	color: #ffffff;
+	vertical-align: middle;
+}
+
+.material-icons.md-36:hover {
+	color: #ffffff;
+}
+
+a.menu-link, a.menu-link:link, a.menu-link:active, a.menu-link:hover {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.card-img-top.img{
+	object-fit:contain;
+	height: auto;
+	max-width:100%;
+}
+.cart-text{
+	color: #808080;
+	font-size: 18px;
+}

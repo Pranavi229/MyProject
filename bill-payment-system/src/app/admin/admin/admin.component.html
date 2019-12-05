@@ -1,0 +1,59 @@
+<div class="image-holder jumbotron backg">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 col-md-6 col-sm-6 ">
+              <h1 class="mb-0 text-black center">   List Of Vendors</h1>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text lighten-3" id="basic-text1">
+                 
+                </span>
+
+                
+              </div>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card mt-5">
+
+         
+          
+        
+            <table class="table">
+              <tr>
+                <th class="ml-5">VendorName</th>
+              
+              </tr>
+
+              <tr *ngFor="let vendor of vendorList">
+                  
+
+                    <td class="ml-5">{{vendor.vname}}</td>
+                   
+                    <td class="ml-5"><a [routerLink]="['/view',vendor.vname]"><button type="submit" class=" ml-5 btn view-btn badge-primary" (click)="viewVendor">View</button></a></td>
+                    <td class="ml-5"><button type="submit" class="badge-success" (click)="accept(vendor)"  [disabled]=" this.vendor.status==true">Accept</button>
+                   </td>
+                    <td class="ml-5"><button type="submit" class="badge-danger" (click)="decline(vendor.vname)"  [disabled]= "this.vendor.vname==this.authservice.getUserName()">Decline</button></td>
+                       </tr>
+                   
+      
+              </table>
+              <br>
+              <br>
+              
+      <!-- <div class="col-lg-3 col-md-6 mb-5" *ngFor="let vendor of vendorList">
+            <div class="card my-5">
+          
+          <div class="row mt-3 ml-5 mr-5 mb-5">
+              <div class="col-12">
+                    {{vendor.vname}}  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                <button type="register" class="btn register-btn">Accept</button>
+                <button type="register" class="btn register-btn">Reject</button>
+                <button type="register" class="btn register-btn">Delete</button>
+              </div>
+                </div>
+              </div>
+            </div> -->

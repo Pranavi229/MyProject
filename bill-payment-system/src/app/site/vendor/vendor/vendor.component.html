@@ -1,0 +1,27 @@
+<div class="card mt-5">
+
+  <h1 align="center">LIST OF VENDORS</h1>
+
+  <table class="table">
+    <tr>
+      <th class="ml-5">VendorName</th>
+
+    </tr>
+
+    <tr *ngFor="let vendor of vendorList">
+
+
+      <td class="ml-5">{{vendor.vname}}</td>
+
+      <td class="ml-5"><a [routerLink]="['/edit',vendor.vname]"><button type="submit"
+            class=" ml-5 btn view-btn badge-primary" (click)="viewVendor">Edit</button></a></td>
+
+      <td class="ml-5"><button type="submit" [disabled]="vendor.vname== this.authservice.username" class="badge-danger"
+          (click)="decline(vendor.vname)">Decline</button></td>
+    </tr>
+
+
+  </table>
+
+
+  <!-- [disabled]=" this.vendor.vname==this.authservice.getUserName" -->

@@ -1,0 +1,47 @@
+<!-- <div class="card-deck my-5">
+        <div class="row">
+           
+          <div class="col-lg-3 col-md-6 mb-5" *ngFor="let vendor of vendors">
+              <div class="card my-5">
+            <p>{{vendor.vname}}</p>
+            <div class="row mt-3 ml-5 mr-5 mb-5">
+                <div class="col-12">
+                  <button type="register" class="btn register-btn">View</button>
+                </div>
+                  </div>
+                </div>
+              </div>
+           <app-item-info [foodItem]="items" (addToCartClicked)=" onAddToCartClick($event)"></app-item-info> -->
+<!-- </div>
+        </div> -->
+
+<div class="card mt-5">
+
+  <table class="table">
+    <tr>
+      <th class="ml-5"><b>Name Of The Vendor</b></th>
+      <th class="ml-5"><b>Pay</b>
+
+    </tr>
+
+    <tr *ngFor="let vendor of vendors">
+
+
+      <td class="ml-5">{{vendor.vname}}</td>
+
+      <td class="ml-5"><a [routerLink]="['/electricity']"><button type="register" class="badge-primary"
+            (click)="view">Pay</button></a></td>
+
+    </tr>
+
+
+  </table>
+  <br>
+  <br>
+  <br>
+
+
+  <!-- <div class="card my-5">
+          <div *ngFor="let v of filteredvendorList"><h1>{{v.vname}}</h1>
+         
+           </div> -->

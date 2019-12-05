@@ -1,0 +1,14 @@
+#content {
+    position: relative;
+}
+#content img {
+    position: absolute;
+    top: 50px;
+   left: 1800px;
+}
+.c{
+    position: absolute;
+    top:250px;
+    left: 700px;
+    text-align: center
+}
